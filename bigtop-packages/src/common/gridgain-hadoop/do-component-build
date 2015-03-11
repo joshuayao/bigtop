@@ -18,5 +18,5 @@ set -ex
 
 . `dirname $0`/bigtop.bom
 
-export MAVEN_OPTS="-Xmx512M -XX:MaxPermSize=512M"
+export MAVEN_OPTS="$MAVEN_OPTS -Xmx512M -XX:MaxPermSize=512M"
 mvn clean package -DskipTests -DskipClientDocs -Dhadoop.version=$HADOOP_VERSION -Dgridgain.edition=hadoop
